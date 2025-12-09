@@ -1,0 +1,731 @@
+/* RESET + BASE */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Accesibilidad */
+button,
+a {
+  outline: none;
+}
+
+.btn:focus-visible,
+.nav a:focus-visible,
+.hero-links a:focus-visible,
+#contacto.section a:focus-visible,
+#newsletter.section a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* FONDO GENERAL */
+
+.app {
+  min-height: 100vh;
+  background: #e5edff;
+  color: #0f172a;
+}
+
+.app.app--dark {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* CONTENEDOR CENTRAL */
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* NAVBAR */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(135deg, #1e293b, #020617);
+  border-bottom: 2px solid #2563eb;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.35);
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #f9fafb;
+  letter-spacing: 0.03em;
+}
+
+.nav nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #e5e7eb;
+  opacity: 0.9;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  background: rgba(191, 219, 254, 0.25);
+  color: #ffffff;
+}
+
+/* Navbar (dark) */
+.app--dark .nav {
+  border-bottom-color: #1d4ed8;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* BOTONES */
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* primaria */
+.btn.primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.45);
+}
+
+.btn.primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* secundaria */
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  color: #0f172a;
+}
+
+.btn.secondary:hover {
+  background: rgba(148, 163, 184, 0.08);
+}
+
+/* estado active común */
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Botón secundario (dark) */
+.app--dark .btn.secondary {
+  color: #e5e7eb;
+  border-color: rgba(148, 163, 184, 0.9);
+}
+
+/* HERO (PERFIL) */
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 2rem;
+  padding: 3.2rem 2.5rem 3.5rem;
+  background: linear-gradient(135deg, #e0ecff 0%, #bfdbfe 40%, #60a5fa 80%);
+  color: #0f172a;
+}
+
+.hero-main {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-text h2 {
+  font-size: 2.4rem;
+  margin: 0 0 0.4rem;
+  color: #0f172a;
+}
+
+.hero-text h3 {
+  font-size: 1.1rem;
+  color: #1d4ed8;
+  margin: 0 0 0.8rem;
+}
+
+.hero-text p {
+  margin: 0.2rem 0;
+  color: #1f2933;
+}
+
+.hero-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  color: #2563eb;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.hero-visitas {
+  font-size: 0.9rem;
+  color: #334155;
+  margin-top: 0.6rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+/* Foto */
+.hero-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
+  flex-shrink: 0;
+}
+
+/* TARJETAS GENERALES */
+
+.hero-card,
+.card,
+#newsletter .newsletter-block {
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+/* TARJETA LATERAL HERO */
+.hero-card {
+  padding: 1.8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.hero-card-divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(148, 163, 184, 0.35);
+  margin: 0.3rem 0 0.8rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.hero-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-links a:hover {
+  color: #1e40af;
+  transform: translateX(3px);
+}
+
+/* TARJETAS (dark) */
+.app--dark .hero-card,
+.app--dark .card,
+.app--dark #newsletter .newsletter-block {
+  background: #020617;
+  border-color: rgba(30, 64, 175, 0.7);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.8);
+}
+
+.app--dark .hero-card-divider {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+.app--dark .hero-links a {
+  color: #93c5fd;
+}
+
+.app--dark .hero-links a:hover {
+  color: #bfdbfe;
+}
+
+/* HERO (dark) */
+.app--dark .hero {
+  background: radial-gradient(circle at top left, #1d4ed8 0%, #020617 60%);
+  color: #f9fafb;
+}
+
+.app--dark .hero-text h2 {
+  color: #f9fafb;
+}
+
+.app--dark .hero-text h3 {
+  color: #bfdbfe;
+}
+
+.app--dark .hero-text p {
+  color: #e5e7eb;
+}
+
+/* SECCIONES GENERALES */
+
+.section {
+  padding: 3rem 2.5rem;
+}
+
+.section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1.4rem;
+}
+
+/* FONDOS */
+#stack.section {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+#proyectos.section {
+  background: #e8efff;
+  color: #0f172a;
+}
+
+#contacto.section {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+#newsletter.section {
+  background: #e8efff;
+  color: #0f172a;
+}
+
+#stack.section,
+#proyectos.section,
+#contacto.section,
+#newsletter.section {
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+/* FONDOS (dark) */
+.app--dark #stack.section {
+  background: #0b1120;
+}
+
+.app--dark #proyectos.section {
+  background: #020617;
+}
+
+.app--dark #contacto.section {
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+.app--dark #newsletter.section {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.app--dark #stack.section,
+.app--dark #proyectos.section,
+.app--dark #contacto.section,
+.app--dark #newsletter.section {
+  border-top-color: rgba(30, 64, 175, 0.7);
+}
+
+/* Texto y enlaces claros en contacto + newsletter (dark) */
+.app--dark #contacto.section h2,
+.app--dark #newsletter.section h2 {
+  color: #e5e7eb;
+}
+
+.app--dark #contacto.section p,
+.app--dark #newsletter.section p {
+  color: #e5e7eb;
+}
+
+/* Links contacto + newsletter */
+#contacto.section a,
+#newsletter.section a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#contacto.section a:hover,
+#newsletter.section a:hover {
+  color: #1d4ed8;
+  transform: translateX(1px);
+}
+
+.app--dark #contacto.section a,
+.app--dark #newsletter.section a {
+  color: #93c5fd;
+}
+
+.app--dark #contacto.section a:hover,
+.app--dark #newsletter.section a:hover {
+  color: #bfdbfe;
+}
+
+/* STACK ICONS */
+
+.skills-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.skill-icon {
+  font-size: 2rem;
+}
+
+.skill-icon.html {
+  color: #f97316;
+}
+
+.skill-icon.css {
+  color: #3b82f6;
+}
+
+.skill-icon.js {
+  color: #facc15;
+}
+
+.skill-icon.bootstrap {
+  color: #a855f7;
+}
+
+.skill-icon.java {
+  color: #ea580c;
+}
+
+.skill-icon.php {
+  color: #6366f1;
+}
+
+.skill-icon.laravel {
+  color: #f97373;
+}
+
+.skill-icon.react {
+  color: #22d3ee;
+}
+
+.skill-icon.mysql {
+  color: #38bdf8;
+}
+
+.skill-icon.git {
+  color: #f97316;
+}
+
+/* PROYECTOS */
+
+.grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  padding: 1.5rem 1.6rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.25);
+  border-color: #3b82f6;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* tarjetas (dark) textos */
+.app--dark .card h3 {
+  color: #e5e7eb;
+}
+
+.app--dark .card p {
+  color: #cbd5f5;
+}
+
+/* FORMULARIOS */
+
+.form,
+.form-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 480px;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.form-inline {
+  flex-direction: row;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  padding: 0.6rem 0.8rem;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(148, 163, 184, 0.9);
+}
+
+/* input (dark) */
+.app--dark input,
+.app--dark textarea {
+  background: #020617;
+  color: #e5e7eb;
+  border-color: rgba(148, 163, 184, 0.9);
+}
+
+.app--dark input::placeholder,
+.app--dark textarea::placeholder {
+  color: rgba(148, 163, 184, 0.8);
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 1.3rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1e293b, #020617);
+  color: #e5e7eb;
+  border-top: 2px solid #2563eb;
+  font-size: 0.9rem;
+}
+
+/* NEWSLETTER */
+
+/* Estructura general del bloque */
+#newsletter.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Título y descripción */
+#newsletter.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+#newsletter.section>p {
+  max-width: 520px;
+}
+
+/* Badge "ejemplo de correo" */
+.newsletter-example {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.badge-example {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  background: rgba(148, 163, 184, 0.18);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #475569;
+  margin-top: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Imágenes newsletter (cabecera + internas) */
+#newsletter .newsletter-header-img,
+#newsletter .newsletter-img,
+#newsletter .newsletter-photo {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: 230px;
+  border-radius: 24px;
+  object-fit: cover;
+  margin: 1.5rem 0 1.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.22);
+}
+
+/* Bloques internos del newsletter */
+#newsletter .newsletter-block {
+  width: 100%;
+  max-width: 620px;
+  padding: 1.3rem 1.4rem;
+  margin-top: 1.4rem;
+}
+
+#newsletter .newsletter-block h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+/* Listas dentro del newsletter */
+#newsletter .newsletter-block ul {
+  padding-left: 1.1rem;
+  margin: 0.3rem 0 0;
+}
+
+#newsletter .newsletter-block li {
+  font-size: 0.92rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Formulario del newsletter */
+#newsletter .form-inline {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+#newsletter .form-inline input[type="email"] {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* NEWSLETTER (dark) */
+
+.app--dark .badge-example {
+  background: rgba(148, 163, 184, 0.12);
+  color: #cbd5f5;
+}
+
+.app--dark #newsletter .newsletter-header-img,
+.app--dark #newsletter .newsletter-img,
+.app--dark #newsletter .newsletter-photo {
+  border-color: rgba(30, 64, 175, 0.9);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.85);
+}
+
+.app--dark #newsletter .newsletter-block h3 {
+  color: #e5e7eb;
+}
+
+.app--dark #newsletter .newsletter-block p,
+.app--dark #newsletter .newsletter-block li {
+  color: #cbd5f5;
+}
+
+/* RESPONSIVE (con media querys) */
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.4rem 3rem;
+  }
+
+  .hero-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .section {
+    padding: 2.4rem 1.4rem;
+  }
+
+  #newsletter .newsletter-header-img,
+  #newsletter .newsletter-img,
+  #newsletter .newsletter-photo {
+    max-width: 100%;
+    height: 190px;
+  }
+
+  #newsletter .newsletter-block {
+    padding: 1.1rem 1.1rem;
+  }
+
+  #newsletter .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav {
+    padding: 0.8rem 1.4rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .nav nav {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}

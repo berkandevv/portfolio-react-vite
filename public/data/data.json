@@ -1,0 +1,112 @@
+{
+    "perfil": {
+        "nombre": "Berkan Beyhanov Raimov",
+        "rol": "Desarrollador Jr.",
+        "descripcion": "Soy estudiante de 2º DAW con interés en desarrollo web.",
+        "foto": "/images/berkan.jpeg",
+        "contacto": {
+            "email": "berkanraimov@gmail.com",
+            "telefono": "618679027",
+            "ciudad": "Palma de Mallorca"
+        },
+        "links": {
+            "github": "https://github.com/berkandevv",
+            "linkedin": "https://www.linkedin.com/in/berkan-raimov-b4876a246/"
+        }
+    },
+    "proyectos": [
+        {
+            "id": 1,
+            "titulo": "Calculadora simple",
+            "descripcion": "Una calculadora básica con operaciones aritméticas.",
+            "tecnologias": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "imagen": "/images/proyectos/calculadora.png"
+        },
+        {
+            "id": 2,
+            "titulo": "Formulario de Login",
+            "descripcion": "Formulario de inicio de sesión con validación básica.",
+            "tecnologias": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "imagen": "/images/proyectos/login-form.png"
+        },
+        {
+            "id": 3,
+            "titulo": "Generador de paletas de colores",
+            "descripcion": "Herramienta para generar colores aleatorios y copiar códigos HEX.",
+            "tecnologias": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "imagen": "/images/proyectos/generador-colores.png"
+        },
+        {
+            "id": 4,
+            "titulo": "Weather App",
+            "descripcion": "Aplicación que muestra el clima actual usando una API pública.",
+            "tecnologias": [
+                "JavaScript",
+                "API REST",
+                "CSS"
+            ],
+            "imagen": "/images/proyectos/weather-app.png"
+        },
+        {
+            "id": 5,
+            "titulo": "Contador simple",
+            "descripcion": "Un contador con botones para sumar, restar y reiniciar.",
+            "tecnologias": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "imagen": "/images/proyectos/contador.png"
+        }
+    ],
+    "newsletter": {
+        "titulo": "Newsletter",
+        "descripcion": "Recibe novedades mensuales sobre mis proyectos.",
+        "frecuencia": "Mensual",
+        "contenido": {
+            "imagen": "/images/newsletter/header.jpg",
+            "intro": [
+                "Hola 👋",
+                "Soy Berkan Beyhanov Raimov, desarrollador Jr.",
+                "Gracias por suscribirte a mi newsletter."
+            ],
+            "proyectoDestacado": {
+                "titulo": "🚀 Proyecto destacado del mes",
+                "imagen": "/images/proyectos/weather-app.png",
+                "nombre": "Weather App",
+                "descripcion": "Aplicación de clima en tiempo real.",
+                "items": [
+                    "Búsqueda por ciudad",
+                    "Datos desde API REST",
+                    "Información actualizada al minuto"
+                ]
+            },
+            "aprendiendo": {
+                "titulo": "📚 Lo que estoy aprendiendo",
+                "imagen": "/images/newsletter/aprendiendo.png",
+                "items": [
+                    "Mejores prácticas con JavaScript",
+                    "Consumo de APIs REST",
+                    "Optimización de interfaces web"
+                ]
+            },
+            "tip": {
+                "titulo": "💡 Tip del mes",
+                "imagen": "/images/newsletter/tip.png",
+                "texto": "Divide la lógica del fetch y el render para un código más limpio."
+            }
+        }
+    }
+}
